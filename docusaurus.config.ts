@@ -99,12 +99,21 @@ const config: Config = {
       },
       items: [
         {to: '/solar-system/journey-begins', label: 'Explore', position: 'left'},
+        {
+          type: 'dropdown',
+          label: 'Solar System',
+          position: 'left',
+          items: [
+            {label: 'Start Here', to: '/solar-system/journey-begins'},
+            {label: 'Inner Solar System', to: '/solar-system/sun'},
+            {label: 'Outer Solar System', to: '/solar-system/jupiter'},
+            {label: 'Beyond Neptune', to: '/solar-system/beyond-neptune'},
+          ],
+        },
         {to: '/activities/quiz', label: 'Activities', position: 'left'},
-        {to: '/demo/how-mdx-works', label: 'How This Demo Works', position: 'left'},
-        {to: '/about', label: 'About', position: 'left'},
+        {to: '/demo/how-mdx-works', label: 'How It Works', position: 'left'},
         {href: 'https://anantagnanam.com', label: 'Main Website', position: 'right'},
         {href: 'https://blog.anantagnanam.com', label: 'Blog', position: 'right'},
-        {href: 'https://github.com/anantagnanam', label: 'GitHub', position: 'right'},
       ],
     },
     footer: {
@@ -117,11 +126,11 @@ const config: Config = {
       },
       links: [
         {
-          title: 'Explore the Solar System',
+          title: 'Explore the Journey',
           items: [
             {label: 'The Journey Begins', to: '/solar-system/journey-begins'},
             {label: 'Meet the Sun', to: '/solar-system/sun'},
-            {label: 'Our Home — Earth', to: '/solar-system/earth'},
+            {label: 'Earth — Our Home', to: '/solar-system/earth'},
             {label: 'Mars — The Red Planet', to: '/solar-system/mars'},
             {label: 'Beyond Neptune', to: '/solar-system/beyond-neptune'},
           ],
@@ -135,12 +144,12 @@ const config: Config = {
           ],
         },
         {
-          title: 'About This Demo',
+          title: 'For Content Authors',
           items: [
+            {label: 'Create a Lesson', to: '/demo/create-a-lesson'},
             {label: 'How MDX Powers This Experience', to: '/demo/how-mdx-works'},
             {label: 'Content Authoring Example', to: '/demo/content-authoring'},
             {label: 'Why GitHub Pages Can Be Useful', to: '/demo/github-pages'},
-            {label: 'About', to: '/about'},
           ],
         },
         {
@@ -148,11 +157,12 @@ const config: Config = {
           items: [
             {label: 'Main Website', href: 'https://anantagnanam.com'},
             {label: 'Blog', href: 'https://blog.anantagnanam.com'},
+            {label: 'About This Site', to: '/about'},
             {label: 'GitHub', href: 'https://github.com/anantagnanam'},
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ananta Gnanam · Built with Docusaurus · MDX · GitHub Pages`,
+      copyright: `Knowledge is Infinite. · This site is a public demonstration of MDX-based static learning experiences. · Copyright © ${new Date().getFullYear()} Ananta Gnanam — built with Docusaurus, MDX, and GitHub Pages`,
     },
     metadata: [
       {

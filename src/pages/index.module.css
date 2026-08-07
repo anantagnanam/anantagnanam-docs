@@ -375,6 +375,78 @@
   padding: 0.65rem 1.5rem;
 }
 
+/* --- More learning journeys ----------------------------------- */
+
+.topicGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.topicCard {
+  padding: 1.5rem 1.4rem 1.3rem;
+  border-radius: 18px;
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  box-shadow: var(--ag-shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.topicCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--ag-gold);
+  box-shadow: var(--ag-shadow-lg, 0 12px 30px rgba(11, 18, 32, 0.12));
+}
+
+.topicCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  background: var(--ag-surface-tint);
+  border: 1px solid var(--ag-border);
+}
+
+.topicCardTitle {
+  margin: 0.85rem 0 0.3rem;
+  font-family: var(--ifm-font-family-headings);
+  font-size: 1.2rem;
+  color: var(--ifm-heading-color);
+}
+
+.topicCardDesc {
+  margin: 0 0 0.9rem;
+  color: var(--ag-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.topicCardSoon {
+  display: inline-block;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ag-gold-dark);
+  background: rgba(232, 184, 75, 0.14);
+  border: 1px solid rgba(232, 184, 75, 0.35);
+}
+
+.topicNote {
+  margin: 1.6rem 0 0;
+  padding: 1.1rem 1.4rem;
+  border-radius: 14px;
+  background: var(--ag-surface-tint);
+  border: 1px solid var(--ag-border);
+  color: var(--ag-text);
+  font-size: 0.98rem;
+}
+
 /* --- Quiz preview -------------------------------------------- */
 
 .quizGrid {
@@ -460,4 +532,88 @@
   .flowDetail {
     display: none;
   }
+}
+
+/* --- 404 — Lost in the cosmos -------------------------------- */
+
+.notFound {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.notFoundEyebrow {
+  margin: 0 0 1rem;
+  font-family: var(--ifm-font-family-headings);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--ag-gold-dark);
+}
+
+.notFoundTitle {
+  margin: 0 0 1.1rem;
+  font-family: var(--ifm-font-family-headings);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  letter-spacing: -0.01em;
+}
+
+.notFoundDesc {
+  margin: 0 auto 2rem;
+  max-width: 30rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ag-text-soft);
+}
+
+.notFoundActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.notFoundPrimary,
+.notFoundGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.notFoundPrimary {
+  color: #2a1d04;
+  background: linear-gradient(135deg, #f5c95c, #e8a93c);
+  border: 1px solid rgba(232, 169, 60, 0.6);
+  box-shadow: 0 6px 18px rgba(232, 169, 60, 0.28);
+}
+
+.notFoundPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(232, 169, 60, 0.34);
+  color: #2a1d04;
+  text-decoration: none;
+}
+
+.notFoundGhost {
+  color: var(--ifm-color-emphasis-700);
+  background: transparent;
+  border: 1px solid var(--ag-border-strong, var(--ifm-color-emphasis-300));
+}
+
+.notFoundGhost:hover {
+  border-color: var(--ag-gold);
+  color: var(--ag-gold-dark);
+  text-decoration: none;
 }

@@ -35,6 +35,15 @@ import StorySection from '@site/src/components/learning/StorySection';
 import ReflectionQuestion from '@site/src/components/learning/ReflectionQuestion';
 import ComparisonTable from '@site/src/components/learning/ComparisonTable';
 import ExploreCard from '@site/src/components/learning/ExploreCard';
+// New journey components
+import LessonHero from '@site/src/components/learning/LessonHero';
+import WhyItMatters from '@site/src/components/learning/WhyItMatters';
+import LearningSummary from '@site/src/components/learning/LearningSummary';
+import MarkExplored from '@site/src/components/learning/MarkExplored';
+import JourneyProgress from '@site/src/components/learning/JourneyProgress';
+import PlanetExplorer from '@site/src/components/learning/PlanetExplorer';
+import QuizRunner from '@site/src/components/learning/QuizRunner';
+import JourneyNav from '@site/src/components/learning/JourneyNav';
 
 const MDXComponents = {
   Head,
@@ -76,6 +85,15 @@ const MDXComponents = {
   ReflectionQuestion,
   ComparisonTable,
   ExploreCard,
+  // New journey components
+  LessonHero,
+  WhyItMatters,
+  LearningSummary,
+  MarkExplored,
+  JourneyProgress,
+  PlanetExplorer,
+  QuizRunner,
+  JourneyNav,
 };
 
 export default MDXComponents;

@@ -8,20 +8,20 @@ import styles from './index.module.css';
 const companions = [
   {
     name: 'Leela',
-    tagline: 'Curious about everything.',
+    tagline: 'The Curious Learner',
     detail: 'She asks the questions you are wondering about too.',
     emoji: '🧒',
   },
   {
     name: 'Manjari',
-    tagline: 'Guides with questions and clues.',
+    tagline: 'Guide & Companion',
     detail: 'A wise little bird who helps you think before you answer.',
     emoji: '🐦',
   },
   {
     name: 'Astra',
-    tagline: 'Reveals the knowledge hidden within.',
-    detail: 'A magical book that explains the world through stories.',
+    tagline: 'Keeper of Knowledge',
+    detail: 'A magical book that reveals explanations through stories.',
     emoji: '📖',
   },
 ];
@@ -58,6 +58,15 @@ const featuredStops = [
   {label: 'Beyond Neptune', href: '/solar-system/beyond-neptune'},
 ];
 
+const futureJourneys = [
+  {title: 'Nature', desc: 'Forests, oceans, and the web of life', icon: '🌿'},
+  {title: 'History', desc: 'Stories of people and civilizations', icon: '🏛️'},
+  {title: 'Mathematics', desc: 'Patterns, puzzles, and beautiful proofs', icon: '🔢'},
+  {title: 'Culture', desc: 'Traditions, art, and ways of seeing', icon: '🎨'},
+  {title: 'Wisdom', desc: 'Ideas for thoughtful, meaningful living', icon: '🕊️'},
+  {title: 'Technology', desc: 'How tools shape the way we learn', icon: '⚙️'},
+];
+
 const techStack = [
   {name: 'MDX', desc: 'Markdown content with live React components'},
   {name: 'React', desc: 'Interactive lessons that hydrate to static HTML'},
@@ -76,25 +85,25 @@ function Hero(): React.JSX.Element {
         <div className={styles.heroContent}>
           <p className={styles.heroBrand}>
             <span className={styles.heroBrandMark} aria-hidden="true">✦</span>
-            Ananta Gnanam
+            ANANTA GNANAM LEARNING JOURNEY
           </p>
           <h1 className={styles.heroTitle}>
             Journey Through the Solar System
           </h1>
           <p className={styles.heroSubtitle}>
-            A story-driven exploration of our cosmic neighborhood with Leela,
-            Manjari, and Astra.
+            Explore our cosmic neighborhood through questions, stories,
+            discoveries, and interactive learning.
           </p>
           <div className={styles.heroActions}>
             <a className={`ag-btn ag-btn--primary ${styles.heroCtaPrimary}`} href="/solar-system/journey-begins">
-              Start the Journey
+              Begin the Journey
             </a>
             <a className={styles.heroCtaSecondary} href="/solar-system/sun">
-              Explore Lessons
+              Explore the Solar System
             </a>
           </div>
           <p className={styles.heroBadge}>
-            Powered by MDX + GitHub Pages
+            Built with MDX • Static Learning Demo
           </p>
         </div>
         <div className={styles.heroVisual}>
@@ -273,6 +282,37 @@ function QuizPreview(): React.JSX.Element {
   );
 }
 
+function MoreJourneys(): React.JSX.Element {
+  return (
+    <section className={`${styles.section} ${styles.sectionAlt}`} id="more-journeys">
+      <div className={styles.container}>
+        <SectionHeading
+          kicker="The journey continues"
+          title="More learning journeys"
+          sub="Explore one example of how Ananta Gnanam can transform curiosity into a learning journey. The same model can carry many worlds of knowledge."
+        />
+        <div className={styles.topicGrid}>
+          {futureJourneys.map((j) => (
+            <article className={styles.topicCard} key={j.title}>
+              <span className={styles.topicCardIcon} aria-hidden="true">
+                {j.icon}
+              </span>
+              <h3 className={styles.topicCardTitle}>{j.title}</h3>
+              <p className={styles.topicCardDesc}>{j.desc}</p>
+              <span className={styles.topicCardSoon}>Coming soon</span>
+            </article>
+          ))}
+        </div>
+        <p className={styles.topicNote}>
+          More learning journeys can follow this same model — stories, questions,
+          and interactive discoveries, built with MDX and delivered as a fast,
+          free static site.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function BuiltWith(): React.JSX.Element {
   return (
     <section className={styles.section} id="built-with">
@@ -317,6 +357,7 @@ export default function Home(): React.JSX.Element {
         <HowLearningWorks />
         <FeaturedJourney />
         <QuizPreview />
+        <MoreJourneys />
         <BuiltWith />
       </main>
     </Layout>

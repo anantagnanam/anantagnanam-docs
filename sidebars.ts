@@ -12,13 +12,13 @@ const sidebars: SidebarsConfig = {
   learningSidebar: [
     {
       type: 'category',
-      label: 'The Journey',
+      label: 'Start Here',
       collapsed: false,
       items: ['solar-system/journey-begins'],
     },
     {
       type: 'category',
-      label: 'Explore the Solar System',
+      label: 'Inner Solar System',
       collapsed: false,
       items: [
         'solar-system/sun',
@@ -27,12 +27,24 @@ const sidebars: SidebarsConfig = {
         'solar-system/earth',
         'solar-system/moon',
         'solar-system/mars',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Outer Solar System',
+      collapsed: false,
+      items: [
         'solar-system/jupiter',
         'solar-system/saturn',
         'solar-system/uranus',
         'solar-system/neptune',
-        'solar-system/beyond-neptune',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Beyond',
+      collapsed: false,
+      items: ['solar-system/beyond-neptune'],
     },
     {
       type: 'category',
@@ -46,9 +58,10 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'How This Demo Works',
-      collapsed: false,
+      label: 'For Content Authors',
+      collapsed: true,
       items: [
+        'demo/create-a-lesson',
         'demo/how-mdx-works',
         'demo/content-authoring',
         'demo/github-pages',

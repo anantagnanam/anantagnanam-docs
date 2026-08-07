@@ -1,5 +1,7 @@
 import React from 'react';
 import type {ReactNode} from 'react';
+import PlanetVisual from './PlanetVisual';
+import type {PlanetKey} from './journeyData';
 
 export interface PlanetFactCardProps {
   /** Planet name, e.g. "Mars" */
@@ -16,6 +18,10 @@ export interface PlanetFactCardProps {
   funFact: string;
   /** Optional approximate diameter, e.g. "6,779 km" */
   diameter?: string;
+  /** Optional temperature, e.g. "About −60 °C on average" */
+  temperature?: string;
+  /** Optional planet key to render the abstract visual instead of an icon */
+  planet?: PlanetKey;
   /** Optional custom icon (emoji or SVG node) shown in the header */
   icon?: ReactNode;
 }
@@ -34,6 +40,8 @@ export default function PlanetFactCard({
   yearLength,
   funFact,
   diameter,
+  temperature,
+  planet,
   icon,
 }: PlanetFactCardProps): React.JSX.Element {
   const ordinal = ORDINALS[orderFromSun - 1] ?? `${orderFromSun}th`;
@@ -41,6 +49,11 @@ export default function PlanetFactCard({
   return (
     <div className="ag-planet-card">
       <div className="ag-planet-card__header">
+        {planet && (
+          <div className="ag-planet-card__visual" aria-hidden="true">
+            <PlanetVisual planet={planet} className="ag-planet-card__art" />
+          </div>
+        )}
         <div className="ag-planet-card__title">
           <span className="ag-planet-card__name">{name}</span>
           <span className="ag-planet-card__type">{type}</span>
@@ -68,6 +81,12 @@ export default function PlanetFactCard({
           <dt>Year length</dt>
           <dd>{yearLength}</dd>
         </div>
+        {temperature && (
+          <div className="ag-planet-card__fact">
+            <dt>Temperature</dt>
+            <dd>{temperature}</dd>
+          </div>
+        )}
       </dl>
       <div className="ag-planet-card__fun">
         <span className="ag-planet-card__fun-label">Fun fact</span>

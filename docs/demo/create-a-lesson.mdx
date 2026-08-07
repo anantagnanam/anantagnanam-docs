@@ -1,0 +1,139 @@
+---
+title: Create a Lesson
+description: A step-by-step guide to authoring a new learning journey lesson with MDX.
+---
+
+# Create a Lesson
+
+<LearningObjective>
+Learn the seven-step recipe for adding a new lesson to this site — from copying a template to watching GitHub Actions deploy it.
+</LearningObjective>
+
+<StorySection>
+"Manjari," Leela asks, "could I write a lesson myself? Something about the stars, maybe?"
+
+Manjari grins. "You absolutely could. And the best part? The whole recipe fits in seven steps. Shall we?"
+</StorySection>
+
+## Step 1 — Copy a Lesson Template
+
+Every lesson lives in the `docs/` folder as a plain `.mdx` file. The quickest start is to copy an existing lesson and rebuild it:
+
+```text
+docs/solar-system/
+  journey-begins.mdx   ← good template: story + facts + quiz + summary
+  mars.mdx             ← good template: planet lesson with hero
+```
+
+Copy one, give it a new name, and open it in your editor. Keep the structure you see there — it is the same skeleton every lesson follows:
+
+```mdx
+<LessonHero id="solar-system/my-lesson" title="My Lesson">
+A one-line description for the hero.
+</LessonHero>
+
+<MarkExplored id="solar-system/my-lesson" />
+
+<LearningObjective>
+What the learner will discover in this lesson.
+</LearningObjective>
+
+<!-- Story, facts, dialogue, quiz, and summary go here -->
+
+<LearningSummary items={["Idea one", "Idea two", "Idea three"]} />
+
+<JourneyNav id="solar-system/my-lesson" />
+```
+
+## Step 2 — Add Frontmatter
+
+Every lesson begins with a small block of frontmatter that gives the page its title and search description:
+
+```yaml
+---
+title: My Lesson
+description: A short summary that appears in search results and link previews.
+---
+```
+
+## Step 3 — Write Markdown
+
+MDX is Markdown first, so ordinary writing just works: `#` headings, `-` bullet lists, `**bold**`, and `[links](/solar-system/mars)`. No special tools needed — a text editor is enough.
+
+## Step 4 — Add Components
+
+The superpower of MDX is dropping live components into your prose. Every learning component is already registered globally, so you can use it without importing anything:
+
+```mdx
+<Leela>
+Why is Mars red?
+</Leela>
+
+<Manjari>
+Think about an old iron nail left out in the rain…
+</Manjari>
+
+<DidYouKnow variant="surprising">
+A day on Venus is longer than its year!
+</DidYouKnow>
+
+<MultipleChoiceQuiz
+  question="What is the Solar System?"
+  options={["The Sun and everything that orbits it", "Only the eight planets"]}
+  correctIndex={0}
+  explanation="The Solar System is the Sun's family."
+/>
+```
+
+A full list of available components — dialogue, callouts, fact cards, quizzes, explorers, progress tracking — is in `src/components/learning/`, and every one of them is registered in `src/theme/MDXComponents/index.tsx`.
+
+<Callout type="tip" title="Match the journey">
+Lessons are more engaging when they follow the flow: a story opening, a discovery or two, a quick check, and a summary. You do not have to use every component — use the ones that serve the learner.
+</Callout>
+
+## Step 5 — Preview Locally
+
+Run the development server and open the printed URL in your browser:
+
+```bash
+npm install
+npm start
+```
+
+The server reloads automatically as you save. Try every component on your page — check the quiz answers, the progress buttons, and how the page looks on a narrow phone window.
+
+## Step 6 — Commit Your Lesson
+
+When it looks right, commit the new file and push it to GitHub:
+
+```bash
+git add docs/solar-system/my-lesson.mdx
+git commit -m "feat: add My Lesson to the solar system journey"
+git push
+```
+
+## Step 7 — GitHub Actions Deploys
+
+The repository's GitHub Actions workflow builds the site and publishes it to GitHub Pages automatically. Within a minute or two of your push, your lesson is live at the site URL — no servers, no manual uploads, no cost.
+
+<DidYouKnow variant="history">
+Because every deploy is built from a commit, the published site always matches the repository. Old lessons stay in git history forever — you can always roll back.
+</DidYouKnow>
+
+<KeyTakeaway>
+A new lesson is just a file: copy a template, add frontmatter, write Markdown, drop in components, preview locally, commit, and let GitHub Actions deploy it. The whole loop is version-controlled and free.
+</KeyTakeaway>
+
+<RelatedTopics
+  items={[
+    {label: 'How a Lesson Is Written', href: '/demo/content-authoring', description: 'Source code and rendered result, side by side'},
+    {label: 'How This Demo Works', href: '/demo/how-mdx-works', description: 'The five-step content pipeline behind this site'},
+    {label: 'Why GitHub Pages', href: '/demo/github-pages', description: 'What static hosting is good at'},
+  ]}
+/>
+
+<NextLesson
+  title="How a Lesson Is Written"
+  description="Now see the source of a real lesson — and the result it becomes."
+  href="/demo/content-authoring"
+/>
