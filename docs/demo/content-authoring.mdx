@@ -1,0 +1,113 @@
+---
+title: How a Lesson Is Written
+description: Open the hood on a page — and watch the source code become the story.
+---
+
+# How a Lesson Is Written
+
+<LearningObjective>
+See the source code behind a lesson, then watch the same components render live — proof that MDX keeps writing simple.
+</LearningObjective>
+
+<StorySection>
+"Manjari," Leela asks, "you said this whole site is written in plain text. Can you show me what a lesson actually looks like before it becomes a page?"
+
+Manjari taps the screen with her wing. "Of course. Here is a miniature lesson — the whole thing, from source to finished page."
+</StorySection>
+
+## The Source
+
+This is a real `.mdx` file — the kind an author writes. Notice how it is just text: headings, sentences, and a few component tags.
+
+<div className="ag-code-panel">
+  <div className="ag-code-panel__bar">
+    <span className="ag-code-panel__dot ag-code-panel__dot--a" aria-hidden="true" />
+    <span className="ag-code-panel__dot ag-code-panel__dot--b" aria-hidden="true" />
+    <span className="ag-code-panel__dot ag-code-panel__dot--c" aria-hidden="true" />
+    <span className="ag-code-panel__filename">a-mini-lesson.mdx</span>
+  </div>
+
+  ```mdx
+  ---
+  title: A Mini Lesson
+  description: A tiny example lesson, just for the demo.
+  ---
+
+  <LearningObjective>
+  Understand why Mars looks red.
+  </LearningObjective>
+
+  # A Mini Lesson
+
+  **Mars** is the fourth planet from the Sun.
+
+  <DidYouKnow>
+  Mars has two tiny moons, Phobos and Deimos.
+  </DidYouKnow>
+
+  <KeyTakeaway>
+  Mars is red because of rust in its soil.
+  </KeyTakeaway>
+  ```
+
+</div>
+
+That is the whole file. No styling code, no layout code, no JavaScript — just words and a few tags. So how does it become a pretty page?
+
+## The Result
+
+Docusaurus feeds that file through MDX, which understands the tags as React components. The same file, rendered:
+
+<LearningObjective>
+Understand why Mars looks red.
+</LearningObjective>
+
+**Mars** is the fourth planet from the Sun.
+
+<DidYouKnow>
+Mars has two tiny moons, Phobos and Deimos.
+</DidYouKnow>
+
+<KeyTakeaway>
+Mars is red because of rust in its soil.
+</KeyTakeaway>
+
+The author never wrote a single line of CSS. The components carry their own polished styling — and every lesson on this site reuses them.
+
+## The Building Blocks
+
+This site ships with a small library of learning components. Authors reach for them like stamps in a stationery box:
+
+<FactGrid
+  items={[
+    {title: 'Dialogue', text: 'Leela, Manjari, and Astra speak through these', icon: '💬'},
+    {title: 'DidYouKnow & Callout', text: 'Highlight facts and gentle warnings', icon: '💡'},
+    {title: 'PlanetFactCard', text: 'A ready-made summary card for any world', icon: '🪐'},
+    {title: 'Quiz', text: 'Interactive multiple-choice checks', icon: '✅'},
+    {title: 'KeyTakeaway', text: 'The one thing to remember', icon: '🔑'},
+    {title: 'NextLesson', text: 'Guide the learner forward', icon: '➡️'},
+  ]}
+/>
+
+<Callout type="tip" title="Why this matters">
+Because content is plain text, anyone can write a lesson with a simple editor. Because the components are reusable, every lesson is instantly polished. That combination is the heart of this demo.
+</Callout>
+
+<KeyTakeaway>
+An MDX lesson is a text file with component tags. MDX compiles it into styled, interactive pages — letting authors focus on teaching, not on code.
+</KeyTakeaway>
+
+<RelatedTopics
+  items={[
+    {label: 'How This Demo Works', href: '/demo/how-mdx-works', description: 'The full pipeline, step by step'},
+    {label: 'Why GitHub Pages', href: '/demo/github-pages', description: 'How the finished site is served'},
+    {label: 'The Journey Begins', href: '/solar-system/journey-begins', description: 'Back to the lessons'},
+  ]}
+/>
+
+<NextLesson
+  title="Why GitHub Pages"
+  description="The final piece of the puzzle — free, fast, static hosting."
+  cta="Keep Exploring"
+  href="/demo/github-pages"
+/>

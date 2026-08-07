@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beyond Neptune — the Kuiper Belt">
+  <defs>
+    <radialGradient id="pluto" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#e8d9c4"/>
+      <stop offset="1" stop-color="#b08a62"/>
+    </radialGradient>
+  </defs>
+  <circle cx="46" cy="52" r="2" fill="#cfe3ff" opacity="0.9"/>
+  <circle cx="150" cy="38" r="1.6" fill="#cfe3ff" opacity="0.8"/>
+  <circle cx="164" cy="120" r="2" fill="#cfe3ff" opacity="0.8"/>
+  <circle cx="30" cy="140" r="1.6" fill="#cfe3ff" opacity="0.7"/>
+  <circle cx="100" cy="100" r="24" fill="url(#pluto)"/>
+  <circle cx="90" cy="92" r="7" fill="#cbb290" opacity="0.7"/>
+  <circle cx="110" cy="110" r="5" fill="#cbb290" opacity="0.6"/>
+  <ellipse cx="100" cy="128" rx="46" ry="10" fill="none" stroke="#8fb0d8" stroke-width="3" opacity="0.5"/>
+  <circle cx="60" cy="134" r="3.5" fill="#8fb0d8" opacity="0.8"/>
+  <circle cx="140" cy="130" r="2.5" fill="#8fb0d8" opacity="0.7"/>
+  <circle cx="100" cy="52" r="2.5" fill="#cfe3ff" opacity="0.6"/>
+</svg>

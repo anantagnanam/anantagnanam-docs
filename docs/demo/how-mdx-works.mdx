@@ -1,0 +1,124 @@
+---
+title: How This Demo Works
+description: A peek behind the scenes — how MDX content becomes this fast, free, static learning site.
+---
+
+# How This Demo Works
+
+<LearningObjective>
+Understand the simple pipeline behind this site — and why it is a great fit for publishing learning content.
+</LearningObjective>
+
+<StorySection>
+Leela has finished the whole journey. Now she is curious about something else: "Manjari, how did all these pages get here? Where does this website live?"
+
+Manjari smiles. "A very good question — and the answer is wonderfully simple. Let me show you the whole journey of a single page."
+</StorySection>
+
+## One Content Pipeline
+
+Every page you have read — every lesson, every quiz — travels through the same five-step path before it reaches your screen.
+
+<div className="ag-flow" role="list" aria-label="Content pipeline">
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">1</span>
+    <span className="ag-flow__label">Author the content</span>
+    <span className="ag-flow__detail">Write in MDX — Markdown + React</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">2</span>
+    <span className="ag-flow__label">Commit to GitHub</span>
+    <span className="ag-flow__detail">Version-controlled, reviewable, undoable</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">3</span>
+    <span className="ag-flow__label">Docusaurus builds</span>
+    <span className="ag-flow__detail">MDX + React compiled to plain HTML, CSS, JS</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">4</span>
+    <span className="ag-flow__label">GitHub Pages serves</span>
+    <span className="ag-flow__detail">Static files, served from a global CDN</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">5</span>
+    <span className="ag-flow__label">The learner reads</span>
+    <span className="ag-flow__detail">Fast, free, always up to date</span>
+  </div>
+</div>
+
+<DidYouKnow>
+Because the final site is just static files, it needs **no server, no database, and no login** — and it can be hosted on GitHub Pages at no cost. That is the whole magic trick.
+</DidYouKnow>
+
+## What Is MDX?
+
+MDX is **Markdown that can contain React components**. Ordinary Markdown gives you headings, lists, and emphasis — and MDX lets you drop in interactive components like quizzes and fact cards right inside the prose.
+
+Compare these two. First, plain Markdown:
+
+```md
+**Mars** is the fourth planet from the Sun.
+```
+
+That renders as a sentence. Now MDX — the same sentence, plus a live component:
+
+```mdx
+**Mars** is the fourth planet from the Sun.
+
+<DidYouKnow>
+Mars has two tiny moons, Phobos and Deimos.
+</DidYouKnow>
+```
+
+The second one becomes a beautiful, styled callout — because MDX lets content authors use the same building blocks the designers build. That is the superpower: **content stays easy to write, and the page still feels alive.**
+
+<Callout type="tip" title="See it live">
+On the next page, you will see the same component written in source code — and rendered right below it. Source and result, side by side.
+</Callout>
+
+## What This Makes Easy
+
+<FactGrid
+  items={[
+    {title: 'Version-controlled', text: 'Every page has a history — roll back any change', icon: '🕰️'},
+    {title: 'Plain-text authoring', text: 'No fancy editor needed — Markdown is just text', icon: '✍️'},
+    {title: 'Reusable components', text: 'Write a quiz once, use it in any lesson', icon: '🧩'},
+    {title: 'Code review', text: 'Changes are reviewed before they go live', icon: '👀'},
+    {title: 'Free static hosting', text: 'GitHub Pages serves the finished site for free', icon: '🆓'},
+    {title: 'Low maintenance', text: 'Nothing to patch, no server to keep awake', icon: '😴'},
+  ]}
+/>
+
+## What This Is Not
+
+Being honest about limits is part of good engineering. This kind of site is **not** a fit for everything:
+
+<Callout type="warning" title="Know the boundaries">
+This is a **static, public content site**. It is not an application backend: there is no database, no user accounts, no private content, and no place for secrets or credentials. It cannot run server-side code or handle payments. If a project needs any of those, it needs different infrastructure.
+</Callout>
+
+This demo is a **public demonstration** of how MDX and GitHub Pages can publish learning material — it is not a description of any private production system.
+
+<KeyTakeaway>
+MDX keeps content simple and lets it come alive with components. Docusaurus builds it into static files, and GitHub Pages serves them free from a global CDN. Simple, fast, and version-controlled.
+</KeyTakeaway>
+
+<RelatedTopics
+  items={[
+    {label: 'How a Lesson Is Written', href: '/demo/content-authoring', description: 'Source code and rendered result, side by side'},
+    {label: 'Why GitHub Pages', href: '/demo/github-pages', description: 'What static hosting is good at'},
+    {label: 'The Journey Begins', href: '/solar-system/journey-begins', description: 'Back to the lessons'},
+  ]}
+/>
+
+<NextLesson
+  title="How a Lesson Is Written"
+  description="Open the hood on one page — and see the source become the story."
+  cta="Open the Hood"
+  href="/demo/content-authoring"
+/>

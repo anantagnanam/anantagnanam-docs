@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="The Moon">
+  <defs>
+    <radialGradient id="moon" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#e6e2da"/>
+      <stop offset="1" stop-color="#a8a29a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="36" fill="url(#moon)"/>
+  <circle cx="88" cy="88" r="10" fill="#b5afa6" opacity="0.8"/>
+  <circle cx="112" cy="106" r="7" fill="#b5afa6" opacity="0.7"/>
+  <circle cx="96" cy="116" r="5" fill="#c4beb5" opacity="0.8"/>
+  <circle cx="118" cy="84" r="4" fill="#c4beb5" opacity="0.6"/>
+</svg>

@@ -1,0 +1,87 @@
+---
+title: Why GitHub Pages
+description: The final piece of the puzzle — free, fast, static hosting tied to your repository.
+---
+
+# Why GitHub Pages
+
+<LearningObjective>
+Understand what GitHub Pages is, why it suits learning content, and where its limits lie.
+</LearningObjective>
+
+<StorySection>
+"Okay," Leela says, "so the pages are built from text. But where do they actually live? Who keeps the website running?"
+
+Manjari puffs out her chest. "No one has to keep it running! That is the best part. The files live on GitHub, and GitHub serves them for us — for free."
+</StorySection>
+
+## What GitHub Pages Is
+
+**GitHub Pages** is a free hosting service that serves static files straight from a GitHub repository. Every time new files are pushed, they can be built and published automatically — no servers to rent, no databases to configure, no midnight outages to fix.
+
+<Callout type="tip" title="Static means simple">
+"Static" just means the files are finished before anyone visits: HTML, CSS, and JavaScript, ready to serve as-is. There is no application running behind the scenes to keep warm.
+</Callout>
+
+## Why It Suits Learning Content
+
+<FactGrid
+  items={[
+    {title: 'Free', text: 'Serving a public site from GitHub Pages costs nothing', icon: '🆓'},
+    {title: 'Fast everywhere', text: 'Files are served through a global CDN', icon: '⚡'},
+    {title: 'Automatic HTTPS', text: 'Secure connections, no certificate paperwork', icon: '🔒'},
+    {title: 'Custom domains', text: 'Point your own domain at it in minutes', icon: '🌐'},
+    {title: 'Tied to git', text: 'Every published version matches a commit', icon: '🕰️'},
+    {title: 'Automated', text: 'Push to the repository, and the site updates itself', icon: '🤖'},
+  ]}
+/>
+
+Lessons, tutorials, documentation, and reference material are a natural fit: they are mostly text, they change gradually, and they benefit enormously from version history — "what did this page say last month?" is a question git answers instantly.
+
+## How Publishing Works Here
+
+This site uses a **GitHub Actions** workflow: every change pushed to the repository triggers a build, and the finished site is published automatically.
+
+<div className="ag-flow" role="list" aria-label="Publishing workflow">
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">1</span>
+    <span className="ag-flow__label">Push a change</span>
+    <span className="ag-flow__detail">A lesson edit, a new quiz, a typo fix</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">2</span>
+    <span className="ag-flow__label">Actions build</span>
+    <span className="ag-flow__detail">npm ci && npm run build</span>
+  </div>
+  <div className="ag-flow__arrow" aria-hidden="true">↓</div>
+  <div className="ag-flow__step" role="listitem">
+    <span className="ag-flow__num" aria-hidden="true">3</span>
+    <span className="ag-flow__label">Pages publishes</span>
+    <span className="ag-flow__detail">The new site goes live moments later</span>
+  </div>
+</div>
+
+<DidYouKnow>
+Because this is a **public repository**, the site is public too — which is exactly right for a learning demo. Free GitHub Pages hosting is intended for public content. Private or sensitive material belongs elsewhere.
+</DidYouKnow>
+
+## Being Honest About Limits
+
+<Callout type="warning" title="Know the boundaries">
+GitHub Pages serves **static files only**. It cannot run a database, handle logins, process payments, or keep secrets — and it should never be given credentials or private data. When a project needs an application backend, that is a different architecture, for a different purpose.
+</Callout>
+
+This demo is exactly what it claims to be: a public showcase of how MDX content can be published to the web with a small, transparent, free toolchain.
+
+<KeyTakeaway>
+GitHub Pages hosts static files free, fast, and automatically — a perfect match for learning content that lives in a public repository and changes through version control.
+</KeyTakeaway>
+
+<RelatedTopics
+  items={[
+    {label: 'How This Demo Works', href: '/demo/how-mdx-works', description: 'The pipeline from text to website'},
+    {label: 'How a Lesson Is Written', href: '/demo/content-authoring', description: 'See source and result side by side'},
+    {label: 'The Journey Begins', href: '/solar-system/journey-begins', description: 'Back to the lessons'},
+  ]}
+/>

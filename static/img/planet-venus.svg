@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Venus">
+  <defs>
+    <radialGradient id="venus" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#f7e6b4"/>
+      <stop offset="1" stop-color="#d9a05b"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="40" fill="url(#venus)"/>
+  <path d="M66 88 Q84 96 104 90 Q122 85 134 92" fill="none" stroke="#c98a45" stroke-width="4" opacity="0.55"/>
+  <path d="M68 112 Q90 120 112 112 Q130 106 138 114" fill="none" stroke="#c98a45" stroke-width="4" opacity="0.5"/>
+  <ellipse cx="88" cy="86" rx="12" ry="9" fill="#ffeec9" opacity="0.6"/>
+</svg>

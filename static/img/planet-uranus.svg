@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Uranus">
+  <defs>
+    <radialGradient id="uranus" cx="0.42" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#c9ecf5"/>
+      <stop offset="1" stop-color="#79c4d9"/>
+    </radialGradient>
+  </defs>
+  <g transform="rotate(78 100 100)">
+    <ellipse cx="100" cy="100" rx="64" ry="14" fill="none" stroke="#a8dce8" stroke-width="5" opacity="0.9"/>
+    <circle cx="100" cy="100" r="36" fill="url(#uranus)"/>
+    <path d="M68 92 Q100 86 132 92" fill="none" stroke="#9cd2e2" stroke-width="3.5" opacity="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-label="A line-up of planets around the Sun">
+  <defs>
+    <radialGradient id="sunG" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset="1" stop-color="#f2a233"/>
+    </radialGradient>
+    <radialGradient id="earthG" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#9fd0f2"/>
+      <stop offset="1" stop-color="#2f6fd8"/>
+    </radialGradient>
+    <radialGradient id="jupG" cx="0.42" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#f2d9b0"/>
+      <stop offset="1" stop-color="#c98a55"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="340" rx="24" fill="#0d1526"/>
+  <circle cx="340" cy="170" r="55" fill="#f2a233" opacity="0.3"/>
+  <circle cx="340" cy="170" r="46" fill="url(#sunG)"/>
+  <circle cx="60" cy="170" r="10" fill="#cbc8c2"/>
+  <circle cx="140" cy="170" r="14" fill="#f7e6b4"/>
+  <circle cx="225" cy="170" r="16" fill="url(#earthG)"/>
+  <circle cx="290" cy="170" r="8" fill="#e6e2da"/>
+  <circle cx="470" cy="170" r="13" fill="#f09a63"/>
+  <circle cx="590" cy="170" r="30" fill="url(#jupG)"/>
+  <g transform="rotate(-14 680 170)">
+    <ellipse cx="680" cy="170" rx="42" ry="10" fill="none" stroke="#e8c07a" stroke-width="5"/>
+    <circle cx="680" cy="170" r="20" fill="#f7e6b4"/>
+  </g>
+  <circle cx="745" cy="170" r="12" fill="#c9ecf5"/>
+  <g stroke="#cfe3ff" stroke-width="1.5" opacity="0.6">
+    <circle cx="80" cy="70" r="1.6"/>
+    <circle cx="500" cy="60" r="2"/>
+    <circle cx="700" cy="50" r="1.6"/>
+    <circle cx="640" cy="280" r="2"/>
+    <circle cx="200" cy="290" r="1.6"/>
+    <circle cx="430" cy="300" r="1.8"/>
+  </g>
+</svg>

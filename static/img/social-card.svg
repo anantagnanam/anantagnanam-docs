@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ananta Gnanam — Journey Through the Solar System">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.6" stop-color="#131f38"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="1" stop-color="#e8a33d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="190" cy="315" r="110" fill="url(#sun)"/>
+  <g stroke="#f4d47c" stroke-width="2.5" opacity="0.75">
+    <ellipse cx="190" cy="315" rx="165" ry="70" fill="none"/>
+    <ellipse cx="190" cy="315" rx="250" ry="105" fill="none"/>
+    <ellipse cx="190" cy="315" rx="350" ry="150" fill="none"/>
+    <ellipse cx="190" cy="315" rx="470" ry="205" fill="none"/>
+  </g>
+  <circle cx="355" cy="310" r="9" fill="#9aa5b8"/>
+  <circle cx="440" cy="300" r="14" fill="#d9a05b"/>
+  <circle cx="545" cy="320" r="16" fill="#5aa7e8"/>
+  <circle cx="655" cy="295" r="11" fill="#e06a3e"/>
+  <circle cx="770" cy="330" r="30" fill="#d8a26a"/>
+  <g>
+    <ellipse cx="1000" cy="240" rx="70" ry="12" fill="none" stroke="#f2d390" stroke-width="6" transform="rotate(-18 1000 240)"/>
+    <circle cx="1000" cy="240" r="24" fill="#e3c07a"/>
+  </g>
+  <circle cx="930" cy="500" r="20" fill="#9fd0f2"/>
+  <circle cx="1080" cy="460" r="19" fill="#3f6fd8"/>
+  <text x="600" y="585" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#f4d47c">Ananta Gnanam · Journey Through the Solar System</text>
+  <circle cx="60" cy="90" r="2" fill="#cfe3ff"/>
+  <circle cx="1120" cy="80" r="2.5" fill="#cfe3ff"/>
+  <circle cx="700" cy="120" r="1.8" fill="#cfe3ff"/>
+  <circle cx="1050" cy="170" r="2" fill="#cfe3ff"/>
+</svg>
